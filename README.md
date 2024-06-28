@@ -67,7 +67,9 @@ Branches criadas durante o desenvolvimento:
   - feat/home-page
   - feat/login-api-conection
   - feat/sports-page
+  - feat/login-page-flow
   - fix/overflow-error
+  - fix/refactor
 
   **Fluxo GitFlow:** https://www.alura.com.br/artigos/assets/git-flow-o-que-e-como-quando-utilizar/imagem3.png
 

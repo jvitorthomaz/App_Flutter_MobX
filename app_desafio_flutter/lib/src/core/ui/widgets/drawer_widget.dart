@@ -89,10 +89,10 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                       barrierDismissible: false,
                       builder: (BuildContext context) => const LoadingWidget(),
                     );
-                    // if (await homeController.coreController.setListSports()) {
-                    //   Navigator.of(context).pop();
-                    //   Navigator.pushNamed(context, '/sports');
-                    // }
+                    if (await homeController.coreController.setListSports()) {
+                      Navigator.of(context).pop();
+                      Navigator.pushNamed(context, '/sports');
+                    }
                   },
                 ),
                 ListTile(

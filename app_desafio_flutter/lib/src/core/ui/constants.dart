@@ -9,6 +9,7 @@ sealed class AppColors {
   static const lightGrey = Color.fromARGB(255, 230, 230, 230);
   static const dividerGrey = Color.fromRGBO(230, 230, 230, 1);
   static const colorPrimaryTheme = Color.fromARGB(51, 0, 0, 0);
+  static const buttonColor = Color.fromRGBO(245, 215, 10, 1);
 
 }
 

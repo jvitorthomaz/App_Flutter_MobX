@@ -1,7 +1,5 @@
 import 'package:app_desafio_flutter/setup_getIt.dart';
 import 'package:app_desafio_flutter/src/modules/home/home_controller.dart';
-import 'package:app_desafio_flutter/src/modules/home/widgets/card_tip_widget.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 class TipWidget extends StatelessWidget {
@@ -37,7 +35,7 @@ class TipWidget extends StatelessWidget {
             height: 15,
           ),
           // CarouselSlider(
-          //   items: homeController.appController.listTips.map((tip) {
+          //   items: homeController.coreController.listTips.map((tip) {
           //     return CardTipWidget(
           //       img: tip.image, description: tip.description, title: tip.title,
           //     );

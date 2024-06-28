@@ -1,6 +1,8 @@
 import 'package:app_desafio_flutter/setup_getIt.dart';
+import 'package:app_desafio_flutter/src/core/ui/constants.dart';
 import 'package:app_desafio_flutter/src/core/ui/widgets/button_icon_wiidget.dart';
 import 'package:app_desafio_flutter/src/core/ui/widgets/button_widget.dart';
+import 'package:app_desafio_flutter/src/core/ui/widgets/divider_widget.dart';
 import 'package:app_desafio_flutter/src/modules/coreController/core_controller.dart';
 import 'package:flutter/material.dart';
 
@@ -20,13 +22,18 @@ class InitialPage extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              Stack(
+              const Stack(
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(8),
                     child: ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
-                      child: const Image(
+                      borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(30),
+                        topRight: Radius.circular(30),
+                        bottomLeft: Radius.circular(20),
+                        bottomRight: Radius.circular(20),
+                      ),
+                      child:  Image(
                         height: 400,
                         width: 400,
                         image: AssetImage('assets/images/img_initial.png'),
@@ -34,24 +41,16 @@ class InitialPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const Positioned(
+                  Positioned(
                     bottom: 45,
                     left: 35,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Entre',
+                          'Entre\nem sua conta',
                           style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 23,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        Text(
-                          'em sua conta',
-                          style: TextStyle(
-                            color: Colors.white,
+                            color: AppColors.colorWhite,
                             fontSize: 23,
                             fontWeight: FontWeight.bold,
                           ),
@@ -60,12 +59,8 @@ class InitialPage extends StatelessWidget {
                           height: 5,
                         ),
                         Text(
-                          'Acompanhe seus jogos,',
-                          style: TextStyle(color: Colors.white, fontSize: 13),
-                        ),
-                        Text(
-                          'campeonatos e times favoritos',
-                          style: TextStyle(color: Colors.white, fontSize: 13),
+                          'Acompanhe seus jogos,\ncampeonatos e times favoritos',
+                          style: TextStyle(color: AppColors.colorWhite, fontSize: 13, fontWeight: FontWeight.w400),
                         ),
                       ],
                     ),
@@ -81,8 +76,8 @@ class InitialPage extends StatelessWidget {
                       children: [
                         ButtonIconWidget(
                           onPressed: () {},
-                          colorBackground: const Color(0xFFE6E6E6),
-                          colorText: const Color(0xFF000000),
+                          colorBackground: AppColors.lightGrey,
+                          colorText: AppColors.colorBlack,
                           img: 'assets/images/g.png',
                           text: 'Entrar com Google',
                           heightIcon: 24,
@@ -96,8 +91,8 @@ class InitialPage extends StatelessWidget {
                         ),
                         ButtonIconWidget(
                           onPressed: () {},
-                          colorBackground: const Color(0xFF000000),
-                          colorText: const Color(0xFFFFFFFF),
+                          colorBackground: AppColors.colorBlack,
+                          colorText: AppColors.colorWhite,
                           img: 'assets/images/apple.png',
                           text: 'Entrar com Apple',
                           heightIcon: 24,
@@ -108,25 +103,23 @@ class InitialPage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Container(
-                          color: const Color.fromARGB(255, 138, 138, 138),
-                          height: 0.3,
-                          width: 90,
-                        ),
-                        const Text(
-                          'ou entre com',
-                          style: TextStyle(
-                              fontSize: 12, fontWeight: FontWeight.bold),
-                        ),
-                        Container(
-                          color: const Color.fromARGB(255, 138, 138, 138),
-                          height: 0.3,
-                          width: 90,
-                        ),
-                      ],
+                    const Padding(
+                      padding: EdgeInsets.only(left: 20, right: 20),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          DividerWidget(),
+                          Padding(
+                            padding: EdgeInsets.only(left: 20, right: 20),
+                            child: Text(
+                              'ou entre com',
+                              style: TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                          DividerWidget(),
+                        ],
+                      ),
                     ),
                     SizedBox(
                       width: 325,
@@ -137,7 +130,7 @@ class InitialPage extends StatelessWidget {
                             onPressed: () {
                               Navigator.pushNamed(context, '/home');
                             },
-                            colorBackground: Colors.white,
+                            colorBackground: AppColors.colorWhite,
                             colorText: const Color(0xFF505854),
                             text: 'Email',
                             border: true,

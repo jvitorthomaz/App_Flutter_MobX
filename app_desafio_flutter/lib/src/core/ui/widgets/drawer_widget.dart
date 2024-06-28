@@ -1,4 +1,5 @@
 import 'package:app_desafio_flutter/setup_getIt.dart';
+import 'package:app_desafio_flutter/src/core/ui/constants.dart';
 import 'package:app_desafio_flutter/src/core/ui/widgets/loading_widget.dart';
 import 'package:app_desafio_flutter/src/modules/home/home_controller.dart';
 import 'package:flutter/material.dart';
@@ -16,13 +17,13 @@ class _DrawerWidgetState extends State<DrawerWidget> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-            backgroundColor: Colors.white,
+            backgroundColor: AppColors.colorWhite,
             child: ListView(
               padding: EdgeInsets.zero,
               children: [
                 DrawerHeader(
                   decoration: const BoxDecoration(
-                    color: Color.fromARGB(255, 255, 255, 255),
+                    color: AppColors.colorWhite,
                   ),
                   child: Align(
                     alignment: Alignment.topRight,
@@ -32,12 +33,12 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
                             shape: const CircleBorder(),
-                            backgroundColor: Colors.white,
+                            backgroundColor: AppColors.colorWhite,
                             padding: const EdgeInsets.all(16.0),
                           ),
                           child: const Icon(
                             Icons.search,
-                            color: Colors.black,
+                            color: AppColors.colorBlack,
                           ),
                         ),
                         ElevatedButton(
@@ -52,12 +53,12 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                             children: [
                               Icon(
                                 Icons.help_outline_outlined,
-                                color: Colors.black,
+                                color: AppColors.colorBlack,
                               ),
                               SizedBox(width: 8.0),
                               Text(
                                 'Ajuda e Suporte',
-                                style: TextStyle(color: Colors.black),
+                                style: TextStyle(color: AppColors.colorBlack),
                               ),
                             ],
                           ),

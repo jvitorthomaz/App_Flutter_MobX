@@ -1,15 +1,16 @@
+import 'package:app_desafio_flutter/src/core/ui/constants.dart';
 import 'package:flutter/material.dart';
 
 sealed class AppTheme {
    static ThemeData themeData =ThemeData(
     primaryColor: const Color.fromARGB(51, 0, 0, 0),
-    indicatorColor: const Color.fromARGB(255, 255, 255, 255),
+    indicatorColor: AppColors.colorWhite,
     brightness: Brightness.light,
     tabBarTheme: const TabBarTheme(
-      labelColor: Colors.black,
-      labelStyle: TextStyle(color: Colors.black),
+      labelColor: AppColors.colorBlack,
+      labelStyle: TextStyle(color: AppColors.colorBlack),
       indicator: UnderlineTabIndicator(
-        borderSide: BorderSide(color: Colors.black)
+        borderSide: BorderSide(color: AppColors.colorBlack)
       )
     ),
   );

@@ -128,7 +128,7 @@ class InitialPage extends StatelessWidget {
                         children: [
                           ButtonWidget(
                             onPressed: () {
-                              Navigator.pushNamed(context, '/home');
+                              Navigator.pushNamed(context, '/login_email');
                             },
                             colorBackground: AppColors.colorWhite,
                             colorText: const Color(0xFF505854),

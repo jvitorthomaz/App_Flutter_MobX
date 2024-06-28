@@ -17,6 +17,7 @@ class LoginService {
       await _saveUserTokens(response.authToken, response.refreshToken);
       return true;
     } catch (e) {
+      
       print("Ocorreu um erro: $e");
       return false;
     }
@@ -27,6 +28,8 @@ class LoginService {
 
     await prefs.setString('auth_token', authToken);
     await prefs.setString('refresh_token', refreshToken);
+    print(authToken);
+    print(refreshToken);
   }
 
   Future<void> _saveUserLoginInfo(String email, String password) async {
@@ -34,6 +37,8 @@ class LoginService {
 
     await prefs.setString('user_email', email);
     await prefs.setString('user_password', password);
+    print(email);
+    print(password);
   }
 
 }

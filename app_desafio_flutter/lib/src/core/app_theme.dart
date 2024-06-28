@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 sealed class AppTheme {
    static ThemeData themeData =ThemeData(
-    primaryColor: const Color.fromARGB(51, 0, 0, 0),
+    primaryColor: AppColors.colorPrimaryTheme,
     indicatorColor: AppColors.colorWhite,
     brightness: Brightness.light,
     tabBarTheme: const TabBarTheme(

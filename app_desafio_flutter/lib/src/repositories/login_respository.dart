@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 
 class LoginRepository {
   Future<LoginModel> loginUser(String email, String password) async {
-    final url = Uri.parse('https://6569cc7dde53105b0dd7af5c.mockapi.io/login');
+    final url = Uri.parse('${URLBASE.urlBase}/login');
     print(email);
     print(password);
     final response = await http.post(

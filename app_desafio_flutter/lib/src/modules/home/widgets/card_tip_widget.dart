@@ -1,3 +1,4 @@
+import 'package:app_desafio_flutter/src/core/ui/constants.dart';
 import 'package:app_desafio_flutter/src/core/ui/widgets/button_icon_wiidget.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,7 @@ class CardTipWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColors.colorWhite,
         borderRadius: const BorderRadius.all(Radius.circular(20)),
         boxShadow: [
           BoxShadow(
@@ -61,8 +62,8 @@ class CardTipWidget extends StatelessWidget {
                 children: [
                   ButtonIconWidget(
                     onPressed: () {},
-                    colorBackground: const Color.fromARGB(255, 255, 255, 255),
-                    colorText: Colors.black,
+                    colorBackground: AppColors.colorWhite,
+                    colorText: AppColors.colorBlack,
                     img: 'assets/images/soccer.png',
                     text: 'Futebol',
                     heightIcon: 16,
@@ -73,8 +74,8 @@ class CardTipWidget extends StatelessWidget {
                   ),
                   ButtonIconWidget(
                     onPressed: () {},
-                    colorBackground: Color.fromARGB(255, 255, 255, 255),
-                    colorText: Colors.black,
+                    colorBackground: AppColors.colorWhite,
+                    colorText: AppColors.colorBlack,
                     img: 'assets/images/basket.png',
                     text: 'Basquete',
                     heightIcon: 16,

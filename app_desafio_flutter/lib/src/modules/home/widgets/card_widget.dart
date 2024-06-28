@@ -1,3 +1,4 @@
+import 'package:app_desafio_flutter/src/core/ui/constants.dart';
 import 'package:flutter/material.dart';
 
 class CardWidget extends StatelessWidget {
@@ -46,13 +47,17 @@ class CardWidget extends StatelessWidget {
                   Text(
                     title,
                     style: const TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18,
-                        color: Colors.black),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                      color: AppColors.colorBlack
+                    ),
                   ),
                   Text(
                     subtitle,
-                    style: const TextStyle(fontSize: 14, color: Colors.black),
+                    style: const TextStyle(
+                      fontSize: 14, 
+                      color: AppColors.colorBlack
+                    ),
                   ),
                 ],
               )

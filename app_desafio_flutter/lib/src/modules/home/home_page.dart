@@ -1,9 +1,10 @@
 
 import 'package:app_desafio_flutter/setup_getIt.dart';
+import 'package:app_desafio_flutter/src/core/ui/constants.dart';
 import 'package:app_desafio_flutter/src/core/ui/widgets/drawer_widget.dart';
 import 'package:app_desafio_flutter/src/core/ui/widgets/loading_widget.dart';
 import 'package:app_desafio_flutter/src/core/ui/widgets/tab_item_widget.dart';
-import 'package:app_desafio_flutter/src/modules/home/all_tab.dart';
+import 'package:app_desafio_flutter/src/modules/home/tabs_widgets/all_sports_tab.dart';
 import 'package:app_desafio_flutter/src/modules/home/home_controller.dart';
 import 'package:flutter/material.dart';
 
@@ -36,8 +37,8 @@ class HomePage extends StatelessWidget {
             ),
           ),
           bottom: const TabBar(
-            indicatorColor: Colors.white,
-            unselectedLabelColor: Color.fromARGB(255, 0, 0, 0),
+            indicatorColor: AppColors.colorWhite,
+            unselectedLabelColor: AppColors.colorBlack,
             isScrollable: true,
             tabs: [
               Tab(
@@ -75,29 +76,29 @@ class HomePage extends StatelessWidget {
               stops: [0.1, 0.6],
               colors: [
                 Color.fromARGB(54, 245, 214, 10),
-                Colors.white,
+                AppColors.colorWhite,
               ],
             ),
           ),
           child: const TabBarView(
             children: [
               // Contents of the "all" tab
-              Center(child: SingleChildScrollView(child: AllTab())),
-              Center(child: Text('Soccer')), // Contents of the "soccer" tab
-              Center(child: Text('Basket')), // Contents of the "basket" tab
-              Center(child: Text('E-Sports')), // Contents of the "e-sports" tab
+              Center(child: SingleChildScrollView(child: AllSportsTabWidget())),
+              Center(child: SingleChildScrollView(child: AllSportsTabWidget())), // Contents of the "soccer" tab
+              Center(child: SingleChildScrollView(child: AllSportsTabWidget())), // Contents of the "basket" tab
+              Center(child: SingleChildScrollView(child: AllSportsTabWidget())), // Contents of the "e-sports" tab
             ],
           ),
         ),
         //drawer: const DrawerWidget(),
         drawer: Drawer(
-          backgroundColor: Colors.white,
+          backgroundColor: AppColors.colorWhite,
           child: ListView(
             padding: EdgeInsets.zero,
             children: [
               DrawerHeader(
                 decoration: const BoxDecoration(
-                  color: Color.fromARGB(255, 255, 255, 255),
+                  color: AppColors.colorWhite,
                 ),
                 child: Align(
                   alignment: Alignment.topRight,
@@ -107,12 +108,12 @@ class HomePage extends StatelessWidget {
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
                           shape: const CircleBorder(),
-                          backgroundColor: Colors.white,
+                          backgroundColor: AppColors.colorWhite,
                           padding: const EdgeInsets.all(16.0),
                         ),
                         child: const Icon(
                           Icons.search,
-                          color: Colors.black,
+                          color: AppColors.colorBlack,
                         ),
                       ),
                       ElevatedButton(
@@ -127,12 +128,12 @@ class HomePage extends StatelessWidget {
                           children: [
                             Icon(
                               Icons.help_outline_outlined,
-                              color: Colors.black,
+                              color: AppColors.colorBlack,
                             ),
                             SizedBox(width: 8.0),
                             Text(
                               'Ajuda e Suporte',
-                              style: TextStyle(color: Colors.black),
+                              style: TextStyle(color: AppColors.colorBlack),
                             ),
                           ],
                         ),
@@ -235,7 +236,7 @@ class HomePage extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                     elevation: 10,
                     shape: const CircleBorder(),
-                    backgroundColor: const Color.fromARGB(255, 0, 0, 0),
+                    backgroundColor: AppColors.colorBlack,
                     padding: const EdgeInsets.all(20.0),
                   ),
                   child: const SizedBox(
@@ -244,7 +245,7 @@ class HomePage extends StatelessWidget {
                     child: Center(
                       child: Icon(
                         Icons.menu,
-                        color: Colors.white,
+                        color: AppColors.colorWhite,
                         size: 15,
                       ),
                     ),
@@ -255,7 +256,7 @@ class HomePage extends StatelessWidget {
                 alignment: Alignment.bottomCenter,
                 child: Container(
                   decoration: BoxDecoration(
-                      color: Colors.black,
+                      color: AppColors.colorBlack,
                       borderRadius: BorderRadius.circular(25.0),
                       boxShadow: [
                         BoxShadow(
@@ -273,7 +274,7 @@ class HomePage extends StatelessWidget {
                         child: IconButton(
                           icon: const Icon(
                             Icons.home,
-                            color: Color.fromARGB(255, 255, 255, 255),
+                            color: AppColors.colorWhite,
                             size: 20,
                           ),
                           onPressed: () {
@@ -285,7 +286,7 @@ class HomePage extends StatelessWidget {
                         child: IconButton(
                           icon: const Icon(
                             Icons.menu,
-                            color: Colors.white,
+                            color: AppColors.colorWhite,
                             size: 20,
                           ),
                           onPressed: () {
@@ -297,7 +298,7 @@ class HomePage extends StatelessWidget {
                         child: IconButton(
                           icon: const Icon(
                             Icons.bookmark_border_rounded,
-                            color: Colors.white,
+                            color: AppColors.colorWhite,
                             size: 20,
                           ),
                           onPressed: () {
@@ -317,7 +318,7 @@ class HomePage extends StatelessWidget {
                     shape: BoxShape.circle,
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black.withOpacity(0.2),
+                        color: AppColors.colorBlack.withOpacity(0.2),
                         spreadRadius: 2,
                         blurRadius: 4,
                         offset: const Offset(0, 3),

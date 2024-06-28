@@ -1,0 +1,40 @@
+
+import 'package:app_desafio_flutter/src/modules/home/widgets/banner_widget.dart';
+import 'package:app_desafio_flutter/src/modules/home/widgets/bonus_widget.dart';
+import 'package:app_desafio_flutter/src/modules/home/widgets/championship_widget.dart';
+import 'package:app_desafio_flutter/src/modules/home/widgets/last_bet_widget.dart';
+import 'package:app_desafio_flutter/src/modules/home/widgets/match_widget.dart';
+import 'package:app_desafio_flutter/src/modules/home/widgets/tip_widget.dart';
+import 'package:flutter/material.dart';
+
+class AllSportsTabWidget extends StatelessWidget {
+  const AllSportsTabWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        const Padding(
+          padding: EdgeInsets.only(top: 25),
+          child: SizedBox(
+            child: Align(
+              alignment: Alignment.topCenter,
+              child: Image(
+                height: 36,
+                width: 143,
+                image: AssetImage('assets/images/empire.png'),
+              ),
+            ),
+          ),
+        ),
+        const BannerWidget(),
+        ChampionshipWidget(),
+        const MatchWidget(),
+        TipWidget(),
+        BonusWidget(),
+        const LastBetWidget(),
+
+      ],
+    );
+  }
+}

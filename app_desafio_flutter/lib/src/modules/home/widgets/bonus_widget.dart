@@ -1,7 +1,6 @@
 
 import 'package:app_desafio_flutter/setup_getIt.dart';
 import 'package:app_desafio_flutter/src/modules/home/home_controller.dart';
-import 'package:app_desafio_flutter/src/modules/home/widgets/card_bonus_widget.dart';
 import 'package:flutter/material.dart';
 
 class BonusWidget extends StatelessWidget {
@@ -34,11 +33,11 @@ class BonusWidget extends StatelessWidget {
           //   //     CardBonusWidget(
           //   //       img: 'assets/images/stake.png',
           //   //       title:
-          //   //           homeController.appController.listBonus[0].platform,
+          //   //           homeController.coreController.listBonus[0].platform,
           //   //     ),
           //   //     CardBonusWidget(
           //   //       img: 'assets/images/bet365.png',
-          //   //       title:homeController.appController.listBonus[1].platform,
+          //   //       title:homeController.coreController.listBonus[1].platform,
           //   //     )
           //   //   ],
           //   // ),

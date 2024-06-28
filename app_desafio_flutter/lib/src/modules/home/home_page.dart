@@ -1,7 +1,6 @@
 
 import 'package:app_desafio_flutter/setup_getIt.dart';
 import 'package:app_desafio_flutter/src/core/ui/constants.dart';
-import 'package:app_desafio_flutter/src/core/ui/widgets/drawer_widget.dart';
 import 'package:app_desafio_flutter/src/core/ui/widgets/loading_widget.dart';
 import 'package:app_desafio_flutter/src/core/ui/widgets/tab_item_widget.dart';
 import 'package:app_desafio_flutter/src/modules/home/tabs_widgets/all_sports_tab.dart';

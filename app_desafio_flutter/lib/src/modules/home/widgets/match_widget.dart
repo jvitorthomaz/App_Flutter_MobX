@@ -14,9 +14,6 @@ class MatchWidget extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(30, 15, 30, 15),
       child: Column(
         children: [
-          //widget tabbar
-          // CardMatch(isMatchPage: false, img_a: homeController.appController.listMatch[0].teamAImage, img_b: homeController.appController.listMatch[0].teamBImage, team_a: homeController.appController.listMatch[0].teamA, team_b: homeController.appController.listMatch[0].teamB, bet: homeController.appController.listMatch[0].odds1xbet.toString(), betsafe: homeController.appController.listMatch[0].oddsBetsafe.toString(), betsson: homeController.appController.listMatch[0].oddsBetsson.toString(), id: 0,),
-          // CardMatch(isMatchPage: false, img_a: homeController.appController.listMatch[1].teamAImage, img_b: homeController.appController.listMatch[1].teamBImage, team_a: homeController.appController.listMatch[1].teamA, team_b: homeController.appController.listMatch[1].teamB, bet: homeController.appController.listMatch[1].odds1xbet.toString(), betsafe: homeController.appController.listMatch[1].oddsBetsafe.toString(), betsson: homeController.appController.listMatch[1].oddsBetsson.toString(), id: 1,),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

@@ -14,12 +14,12 @@ class InputFieldWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _authenticationController = getIt<AuthController>();
+    final _authController = getIt<AuthController>();
 
     return TextFormField(
       obscureText: keyboard == TextInputType.emailAddress
           ? false
-          : _authenticationController.isObscure,
+          : _authController.isObscure,
       cursorColor: Color.fromRGBO(109, 109, 109, 1),
       keyboardType: keyboard,
       decoration: InputDecoration(
@@ -38,15 +38,6 @@ class InputFieldWidget extends StatelessWidget {
           color: Color.fromRGBO(109, 109, 109, 1),
           fontSize: 25,
         ),
-        // suffixIcon: IconButton(
-        //   icon: Icon(_authenticationController.isObscure
-        //       ? Icons.visibility
-        //       : Icons.visibility_off),
-        //   onPressed: () {
-        //     print('teste 1 ${_authenticationController.isObscure}');
-        //     _authenticationController.changeValue();
-        //   },
-        // ),
       ),
       controller: object,
       style: const TextStyle(

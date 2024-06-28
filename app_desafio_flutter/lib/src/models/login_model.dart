@@ -8,10 +8,4 @@ class LoginModel {
       : authToken = json['auth_token'] ?? '',
         refreshToken = json['refresh_token'] ?? '';
 
-  // Map<String, dynamic> toJson() {
-  //   final Map<String, dynamic> data = new Map<String, dynamic>();
-  //   data['auth_token'] = this.authToken;
-  //   data['refresh_token'] = this.refreshToken;
-  //   return data;
-  // }
 }

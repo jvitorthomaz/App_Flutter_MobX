@@ -38,26 +38,27 @@ class LastBetWidget extends StatelessWidget {
                 ],
               ),
             ),
-            // CarouselSlider(
-            //     items: 
-            //     homeController.coreController.listWonBets.map((bet) {
-            //         return CardBet(
-            //           img: bet.userAvatar,
-            //           name: bet.user,
-            //           description: bet.platform,
-            //           teams: '',
-            //           time: '',
-            //           value: bet.score.toString(),
-            //           avatar: bet.userAvatar);
-            //     }).toList(),
-            //     options: CarouselOptions(
-            //         height: 92,
-            //         enlargeCenterPage: false,
-            //         enableInfiniteScroll: false,
-            //         viewportFraction: 0.9,
-            //         padEnds: false
-            //     )
-            // )
+            CarouselSlider(
+                items: 
+                homeController.coreController.listWonBets.map((bet) {
+                    return CardBet(
+                      img: bet.userAvatar,
+                      name: bet.user,
+                      description: bet.platform,
+                      teams: '',
+                      time: '',
+                      value: bet.score.toString(),
+                      avatar: bet.userAvatar
+                );
+                }).toList(),
+                options: CarouselOptions(
+                    height: 92,
+                    enlargeCenterPage: false,
+                    enableInfiniteScroll: false,
+                    viewportFraction: 0.9,
+                    padEnds: false
+                )
+            )
           ],
         ),
       ),

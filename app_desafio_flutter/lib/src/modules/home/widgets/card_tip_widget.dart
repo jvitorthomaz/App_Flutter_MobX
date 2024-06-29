@@ -15,6 +15,7 @@ class CardTipWidget extends StatelessWidget {
       decoration: BoxDecoration(
         color: AppColors.colorWhite,
         borderRadius: const BorderRadius.all(Radius.circular(20)),
+        
         boxShadow: [
           BoxShadow(
             color: const Color.fromARGB(255, 10, 10, 10).withOpacity(0.15),
@@ -25,7 +26,7 @@ class CardTipWidget extends StatelessWidget {
         ],
       ),
       width: 275,
-      height: 410,
+      height: 450,
       child: Column(
         children: [
           ClipRRect(
@@ -34,16 +35,17 @@ class CardTipWidget extends StatelessWidget {
               topRight: Radius.circular(20.0),
             ),
             child: Image.network(img,
-                height: 141,
-                width: 275,
-                fit: BoxFit.cover),
+              height: 141,
+              width: 275,
+              fit: BoxFit.cover
+            ),
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
                 margin: const EdgeInsets.only(left: 20),
-                height: 165,
+                height: 140,
                 width: 240,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,

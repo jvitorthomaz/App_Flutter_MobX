@@ -22,7 +22,10 @@ class ButtonIconWidget extends StatelessWidget {
     required this.img,
     required this.text,
     required this.heightIcon,
-    required this.widhtIcon, required this.heightButton, required this.widhtButton, required this.textSize,
+    required this.widhtIcon,
+    required this.heightButton,
+    required this.widhtButton,
+    required this.textSize,
   });
 
   @override
@@ -37,15 +40,19 @@ class ButtonIconWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Image(
-                height: heightIcon,
-                width: widhtIcon,
-                image: AssetImage(img),
-                fit: BoxFit.cover),
-            Text(text,
-                style: TextStyle(
-                    color: colorText,
-                    fontSize: textSize,
-                    fontWeight: FontWeight.bold))
+              height: heightIcon,
+              width: widhtIcon,
+              image: AssetImage(img),
+              fit: BoxFit.cover
+            ),
+            Text(
+              text,
+              style: TextStyle(
+                color: colorText,
+                fontSize: textSize,
+                fontWeight: FontWeight.bold
+              )
+            )
           ],
         ),
       ),

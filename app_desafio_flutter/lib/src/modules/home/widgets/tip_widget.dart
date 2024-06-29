@@ -20,7 +20,7 @@ class TipWidget extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              margin: const EdgeInsets.only(left: 45, right: 35),
+              margin: const EdgeInsets.only(left: 12, right: 35),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

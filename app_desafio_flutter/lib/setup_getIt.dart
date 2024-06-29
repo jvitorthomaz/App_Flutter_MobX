@@ -15,8 +15,6 @@ import 'package:app_desafio_flutter/src/services/login_service.dart';
 import 'package:app_desafio_flutter/src/services/sports_service.dart';
 import 'package:app_desafio_flutter/src/services/tip_service.dart';
 import 'package:app_desafio_flutter/src/services/won_bet_service.dart';
-import 'package:app_desafio_flutter/src/store/championship_store.dart';
-import 'package:app_desafio_flutter/src/store/sports_store.dart';
 import 'package:get_it/get_it.dart';
 
 final getIt = GetIt.instance;
@@ -32,9 +30,6 @@ setupGetIt() {
     repository: getIt<SportsRepository>(),
   ));
   getIt.registerLazySingleton<SportsRepository>(() => SportsRepository());
-  getIt.registerLazySingleton<SportsStore>(() => SportsStore(
-    getIt<SportsRepository>(),
-  ));
 
   getIt.registerLazySingleton<ChampionshipService>(() => ChampionshipService(
     repository: getIt<ChampionshipRepository>(),
@@ -42,9 +37,6 @@ setupGetIt() {
   getIt.registerLazySingleton<ChampionshipRepository>(
     () => ChampionshipRepository()
   );
-  getIt.registerLazySingleton<ChampionshipStore>(() => ChampionshipStore(
-    getIt<ChampionshipRepository>(),
-  ));
   getIt.registerLazySingleton<TipService>(() => TipService(
     repository: getIt<TipRepository>(),
   ));
@@ -61,9 +53,7 @@ setupGetIt() {
 
   getIt.registerLazySingleton<CoreController>(() => CoreController(
     getIt<SportsService>(),
-    getIt<SportsStore>(),
     getIt<ChampionshipService>(),
-    getIt<ChampionshipStore>(),
     getIt<TipService>(),
     getIt<BonusService>(),
     getIt<WonBetService>(),

@@ -37,8 +37,7 @@ class BannerWidget extends StatelessWidget {
           height: 191,
           enlargeCenterPage: false,
           enableInfiniteScroll: false,
-          viewportFraction:
-              0.7,
+          viewportFraction:0.7,
         )
       ),
     );

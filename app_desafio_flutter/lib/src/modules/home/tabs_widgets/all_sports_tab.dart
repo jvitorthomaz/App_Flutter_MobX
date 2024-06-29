@@ -14,9 +14,17 @@ class AllSportsTabWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        const BannerWidget(),
+        ChampionshipWidget(),
+        const MatchWidget(),
+        TipWidget(),
+        BonusWidget(),
+        const LastBetWidget(),
+
         const Padding(
           padding: EdgeInsets.only(top: 25),
           child: SizedBox(
+            height: 125,
             child: Align(
               alignment: Alignment.topCenter,
               child: Image(
@@ -26,13 +34,7 @@ class AllSportsTabWidget extends StatelessWidget {
               ),
             ),
           ),
-        ),
-        const BannerWidget(),
-        ChampionshipWidget(),
-        const MatchWidget(),
-        TipWidget(),
-        BonusWidget(),
-        const LastBetWidget(),
+        )
 
       ],
     );

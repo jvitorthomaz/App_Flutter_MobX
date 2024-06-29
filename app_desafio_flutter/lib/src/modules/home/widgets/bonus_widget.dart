@@ -17,15 +17,12 @@ class BonusWidget extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          const Padding(
-            padding: EdgeInsets.only(left: 35),
-            child: Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Principais bônus de aposta',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              )
-            ),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              'Principais bônus de aposta',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            )
           ),
           SizedBox(
             height: 200,

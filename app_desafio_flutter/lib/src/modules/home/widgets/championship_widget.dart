@@ -12,13 +12,13 @@ class ChampionshipWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.all(15),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Padding(
-            padding: EdgeInsets.only(left: 20),
+            padding: EdgeInsets.only(left: 12),
             child: Text(
               'Campeonatos populares',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),

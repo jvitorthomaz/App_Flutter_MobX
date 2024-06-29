@@ -14,7 +14,7 @@ class LastBetWidget extends StatelessWidget {
     return SizedBox(
       height: 200,
       child: Container(
-        margin: const EdgeInsets.fromLTRB(0, 10, 0, 35),
+        margin: const EdgeInsets.fromLTRB(20, 10, 0, 35),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,

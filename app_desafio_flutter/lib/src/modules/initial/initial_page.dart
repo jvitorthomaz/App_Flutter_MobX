@@ -13,7 +13,7 @@ class InitialPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final appController = getIt<CoreController>();
 
-    appController.initStore();
+    //appController.initStore();
     appController.initValues();
 
     return MaterialApp(

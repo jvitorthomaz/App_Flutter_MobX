@@ -1,6 +1,4 @@
 
-import 'package:app_desafio_flutter/setup_getIt.dart';
-import 'package:app_desafio_flutter/src/modules/home/home_controller.dart';
 import 'package:flutter/material.dart';
 
 class MatchWidget extends StatelessWidget {
@@ -8,7 +6,6 @@ class MatchWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final homeController = getIt<HomeController>();
 
     return Container(
       padding: const EdgeInsets.fromLTRB(30, 15, 30, 15),

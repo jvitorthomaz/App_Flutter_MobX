@@ -1,8 +1,8 @@
-import 'package:app_desafio_flutter/setup_getIt.dart';
+import 'package:app_desafio_flutter/src/core/setup_getIt.dart';
 import 'package:app_desafio_flutter/src/core/ui/constants.dart';
-import 'package:app_desafio_flutter/src/core/ui/widgets/button_icon_wiidget.dart';
-import 'package:app_desafio_flutter/src/core/ui/widgets/button_widget.dart';
-import 'package:app_desafio_flutter/src/core/ui/widgets/divider_widget.dart';
+import 'package:app_desafio_flutter/src/core/ui/components/button_icon_wiidget.dart';
+import 'package:app_desafio_flutter/src/core/ui/components/button_widget.dart';
+import 'package:app_desafio_flutter/src/core/ui/components/divider_widget.dart';
 import 'package:app_desafio_flutter/src/modules/coreController/core_controller.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +13,6 @@ class InitialPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final appController = getIt<CoreController>();
 
-    //appController.initStore();
     appController.initValues();
 
     return MaterialApp(
@@ -25,14 +24,9 @@ class InitialPage extends StatelessWidget {
               const Stack(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(8),
+                    padding: EdgeInsets.all(8),
                     child: ClipRRect(
-                      borderRadius: const BorderRadius.only(
-                        topLeft: Radius.circular(30),
-                        topRight: Radius.circular(30),
-                        bottomLeft: Radius.circular(20),
-                        bottomRight: Radius.circular(20),
-                      ),
+                      borderRadius: BorderRadius.all(Radius.circular(30)),
                       child:  Image(
                         height: 400,
                         width: 400,

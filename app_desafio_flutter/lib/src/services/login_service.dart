@@ -1,4 +1,4 @@
-import 'package:app_desafio_flutter/setup_getIt.dart';
+import 'package:app_desafio_flutter/src/core/setup_getIt.dart';
 import 'package:app_desafio_flutter/src/modules/auth/auth_controller.dart';
 import 'package:app_desafio_flutter/src/repositories/login_respository.dart';
 import 'package:shared_preferences/shared_preferences.dart';

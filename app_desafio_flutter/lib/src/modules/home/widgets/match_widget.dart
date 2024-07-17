@@ -1,4 +1,7 @@
 
+import 'package:app_desafio_flutter/src/core/setup_getIt.dart';
+import 'package:app_desafio_flutter/src/core/ui/components/card_match_widget.dart';
+import 'package:app_desafio_flutter/src/modules/home/home_controller.dart';
 import 'package:flutter/material.dart';
 
 class MatchWidget extends StatelessWidget {
@@ -6,11 +9,14 @@ class MatchWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final homeController = getIt<HomeController>();
 
     return Container(
       padding: const EdgeInsets.fromLTRB(30, 15, 30, 15),
       child: Column(
         children: [
+          CardMatchWidget(isMatchPage: false, img_a: homeController.coreController.listMatch[0].teamAImage, img_b: homeController.coreController.listMatch[0].teamBImage, team_a: homeController.coreController.listMatch[0].teamA, team_b: homeController.coreController.listMatch[0].teamB, bet: homeController.coreController.listMatch[0].odds1xbet.toString(), betsafe: homeController.coreController.listMatch[0].oddsBetsafe.toString(), betsson: homeController.coreController.listMatch[0].oddsBetsson.toString(), id: 0,),
+          CardMatchWidget(isMatchPage: false, img_a: homeController.coreController.listMatch[1].teamAImage, img_b: homeController.coreController.listMatch[1].teamBImage, team_a: homeController.coreController.listMatch[1].teamA, team_b: homeController.coreController.listMatch[1].teamB, bet: homeController.coreController.listMatch[1].odds1xbet.toString(), betsafe: homeController.coreController.listMatch[1].oddsBetsafe.toString(), betsson: homeController.coreController.listMatch[1].oddsBetsson.toString(), id: 1,),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

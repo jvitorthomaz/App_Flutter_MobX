@@ -6,12 +6,14 @@ import 'package:app_desafio_flutter/src/modules/home/home_controller.dart';
 import 'package:app_desafio_flutter/src/repositories/bonus_repository.dart';
 import 'package:app_desafio_flutter/src/repositories/championship_repository.dart';
 import 'package:app_desafio_flutter/src/repositories/login_respository.dart';
+import 'package:app_desafio_flutter/src/repositories/match_repository.dart';
 import 'package:app_desafio_flutter/src/repositories/sports_repository.dart';
 import 'package:app_desafio_flutter/src/repositories/tip_repository.dart';
 import 'package:app_desafio_flutter/src/repositories/won_bet_repository.dart';
 import 'package:app_desafio_flutter/src/services/bonus_service.dart';
 import 'package:app_desafio_flutter/src/services/championship_service.dart';
 import 'package:app_desafio_flutter/src/services/login_service.dart';
+import 'package:app_desafio_flutter/src/services/match_service.dart';
 import 'package:app_desafio_flutter/src/services/sports_service.dart';
 import 'package:app_desafio_flutter/src/services/tip_service.dart';
 import 'package:app_desafio_flutter/src/services/won_bet_service.dart';
@@ -31,25 +33,35 @@ setupGetIt() {
   ));
   getIt.registerLazySingleton<SportsRepository>(() => SportsRepository());
 
+
   getIt.registerLazySingleton<ChampionshipService>(() => ChampionshipService(
     repository: getIt<ChampionshipRepository>(),
   ));
   getIt.registerLazySingleton<ChampionshipRepository>(
     () => ChampionshipRepository()
   );
+
   getIt.registerLazySingleton<TipService>(() => TipService(
     repository: getIt<TipRepository>(),
   ));
   getIt.registerLazySingleton<TipRepository>(() => TipRepository());
 
+
   getIt.registerLazySingleton<BonusService>(() => BonusService(
       repository: getIt<BonusRepository>(),
   ));
   getIt.registerLazySingleton<BonusRepository>(() => BonusRepository());
+
+
   getIt.registerLazySingleton<WonBetService>(() => WonBetService(
       repository: getIt<WonBetRepository>(),
   ));
   getIt.registerLazySingleton<WonBetRepository>(() => WonBetRepository());
+
+  getIt.registerLazySingleton<MatchService>(() => MatchService(
+      repository: getIt<MatchRepository>(),
+    ));
+  getIt.registerLazySingleton<MatchRepository>(() => MatchRepository());
 
   getIt.registerLazySingleton<CoreController>(() => CoreController(
     getIt<SportsService>(),
@@ -57,5 +69,6 @@ setupGetIt() {
     getIt<TipService>(),
     getIt<BonusService>(),
     getIt<WonBetService>(),
+    getIt<MatchService>(),
   ));
 }

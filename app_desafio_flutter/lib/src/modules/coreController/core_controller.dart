@@ -57,6 +57,7 @@ abstract class _CoreControllerBase with Store {
       "team_a": "Biloxi",
       "team_b": "Towson",
       "team_a_score": 7585,
+      "team_b_score": 7016,
       "1xbet_odds_avg": 67336.67,
       "betsafe_odds_avg": 76321.71,
       "betsson_odds_avg": 59871.08,
@@ -130,7 +131,7 @@ abstract class _CoreControllerBase with Store {
         print('-------------------');
         print('-------------------');
         print(listMatch.length);
-        print(listMatch.elementAt(0));
+        print(listMatch[0].id.isEmpty);
         print('-------------------');
         print('-------------------');
     return true;

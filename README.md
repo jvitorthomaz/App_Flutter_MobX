@@ -68,6 +68,7 @@ Branches criadas durante o desenvolvimento:
   - feat/login-api-conection
   - feat/sports-page
   - feat/login-page-flow
+  - feat/matches
   - feat/home-endpoints
   - fix/overflow-error
   - fix/refactor

@@ -29,10 +29,10 @@ class HomePage extends StatelessWidget {
           title: const Align(
             alignment: Alignment.center,
             child: Image(
-                height: 25,
-                width: 99.31,
-                image: AssetImage('assets/images/empire.png'),
-                fit: BoxFit.cover
+              height: 25,
+              width: 99.31,
+              image: AssetImage('assets/images/empire.png'),
+              fit: BoxFit.cover
             ),
           ),
           bottom: const TabBar(

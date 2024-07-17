@@ -31,9 +31,9 @@ class MatchPage extends StatelessWidget {
             ),
           ),
           DraggableScrollableSheet(
-            initialChildSize: 0.2,
+            initialChildSize: 0.3,
             minChildSize: 0.2,
-            maxChildSize: 0.7,
+            maxChildSize: 0.9,
             builder: (BuildContext context, ScrollController scrollController) {
               return Container(
                 decoration: const BoxDecoration(
@@ -47,22 +47,24 @@ class MatchPage extends StatelessWidget {
                   controller: scrollController,
                   children: [
                     SizedBox(
-                      height: 100,
+                      height: 70,
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            mainAxisAlignment: MainAxisAlignment.start,
                             children: [
+                              SizedBox(width: 20,),
                               ButtonWidget(
                                 onPressed: () {},
                                 colorBackground: Colors.black,
                                 colorText: Colors.white,
                                 text: 'Odds mais altas',
                                 border: false,
-                                widthButton: 150,
+                                widthButton: 155,
                                 heightButton: 47
                               ),
+                              SizedBox(width: 10,),
                               ButtonWidget(
                                 onPressed: () {},
                                 colorBackground: const Color(0xFFF5D70A),
@@ -70,7 +72,7 @@ class MatchPage extends StatelessWidget {
                                 text: 'Outras Odds',
                                 border: true,
                                 borderColor: Colors.black,
-                                widthButton: 130,
+                                widthButton: 135,
                                 heightButton: 47
                               ),
                             ],

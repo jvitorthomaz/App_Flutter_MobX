@@ -6,7 +6,7 @@ import 'package:app_desafio_flutter/src/modules/home/home_controller.dart';
 import 'package:flutter/material.dart';
 
 class CardMatchWidget extends StatelessWidget {
-  final bool isMatchPage;
+  bool isMatchPage;
   final String img_a;
   final String team_a;
   final String img_b;
@@ -34,7 +34,7 @@ class CardMatchWidget extends StatelessWidget {
     final homeController = getIt<HomeController>();
 
     return Container(
-      margin: const EdgeInsets.only(top: 15, bottom: 15, left: 25, right: 25),
+      margin: const EdgeInsets.only(bottom: 15),
       height: 400,
       decoration: BoxDecoration(
         color: const Color.fromARGB(255, 255, 255, 255),
@@ -92,7 +92,7 @@ class CardMatchWidget extends StatelessWidget {
                       ),
                       color: Colors.transparent,
                     ),
-                    child: const Center(child: Text("60'")),
+                    child: const Center(child: Text("60")),
                   ),
                 ],
               ),
@@ -108,7 +108,7 @@ class CardMatchWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Text(
-                  '',
+                  '2',
                   style: TextStyle(fontSize: 50),
                 ),
                 Text(
@@ -117,7 +117,7 @@ class CardMatchWidget extends StatelessWidget {
                       fontSize: 50, color: Color.fromARGB(131, 0, 0, 0)),
                 ),
                 Text(
-                  '',
+                  '2',
                   style: TextStyle(fontSize: 50),
                 ),
               ],
@@ -132,7 +132,8 @@ class CardMatchWidget extends StatelessWidget {
                   img: 'assets/images/bet.png',
                   value: bet,
                   widthImg: 60,
-                  heightImg: 21),
+                  heightImg: 21
+              ),
               Container(
                 color: const Color.fromARGB(255, 138, 138, 138),
                 height: 30,
@@ -157,19 +158,28 @@ class CardMatchWidget extends StatelessWidget {
                   heightImg: 11),
             ],
           ),
-          Container(
-            color: const Color.fromARGB(255, 138, 138, 138),
-            height: 0.3,
-            width: 300,
-          ),
-          !isMatchPage
-              ? InkWell(
-                  onTap: () {
-                    homeController.coreController.setMatch(homeController.coreController.listMatch[id]);
-                    Navigator.pushNamed(context, '/match');
-                  },
-                  child: const Text('Ver mais'))
-              : Container()
+
+          isMatchPage == false
+              ? Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Container(
+                    color: const Color.fromARGB(255, 138, 138, 138),
+                    height: 0.3,
+                    width: 300,
+                  ),
+                  const SizedBox(height: 20,),
+                  InkWell(
+                    onTap: () {
+                      
+                      homeController.coreController.setMatch(homeController.coreController.listMatch[id]);
+                      Navigator.pushNamed(context, '/match');
+                    },
+                    child: const Text('Ver mais')
+                  ),
+                ],
+              )
+              : const SizedBox.shrink()
         ],
       ),
     );

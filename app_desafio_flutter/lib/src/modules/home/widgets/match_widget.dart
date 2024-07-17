@@ -12,20 +12,44 @@ class MatchWidget extends StatelessWidget {
     final homeController = getIt<HomeController>();
 
     return Container(
-      padding: const EdgeInsets.fromLTRB(30, 15, 30, 15),
+      padding: const EdgeInsets.fromLTRB(15, 15, 15, 15),
       child: Column(
         children: [
-          CardMatchWidget(isMatchPage: false, img_a: homeController.coreController.listMatch[0].teamAImage, img_b: homeController.coreController.listMatch[0].teamBImage, team_a: homeController.coreController.listMatch[0].teamA, team_b: homeController.coreController.listMatch[0].teamB, bet: homeController.coreController.listMatch[0].odds1xbet.toString(), betsafe: homeController.coreController.listMatch[0].oddsBetsafe.toString(), betsson: homeController.coreController.listMatch[0].oddsBetsson.toString(), id: 0,),
-          CardMatchWidget(isMatchPage: false, img_a: homeController.coreController.listMatch[1].teamAImage, img_b: homeController.coreController.listMatch[1].teamBImage, team_a: homeController.coreController.listMatch[1].teamA, team_b: homeController.coreController.listMatch[1].teamB, bet: homeController.coreController.listMatch[1].odds1xbet.toString(), betsafe: homeController.coreController.listMatch[1].oddsBetsafe.toString(), betsson: homeController.coreController.listMatch[1].oddsBetsson.toString(), id: 1,),
+          CardMatchWidget(
+            isMatchPage: false,
+            img_a: homeController.coreController.listMatch[0].teamAImage,
+            img_b: homeController.coreController.listMatch[0].teamBImage,
+            team_a: homeController.coreController.listMatch[0].teamA,
+            team_b: homeController.coreController.listMatch[0].teamB,
+            bet: homeController.coreController.listMatch[0].odds1xbet.toString(),
+            betsafe: homeController.coreController.listMatch[0].oddsBetsafe.toString(),
+            betsson: homeController.coreController.listMatch[0].oddsBetsson.toString(),
+            id: 0 //homeController.coreController.listMatch[0].id,
+          ),
+          CardMatchWidget(
+            isMatchPage: false,
+            img_a: homeController.coreController.listMatch[1].teamAImage,
+            img_b: homeController.coreController.listMatch[1].teamBImage,
+            team_a: homeController.coreController.listMatch[1].teamA,
+            team_b: homeController.coreController.listMatch[1].teamB,
+            bet:
+                homeController.coreController.listMatch[1].odds1xbet.toString(),
+            betsafe: homeController.coreController.listMatch[1].oddsBetsafe
+                .toString(),
+            betsson: homeController.coreController.listMatch[1].oddsBetsson
+                .toString(),
+            id: 1 //homeController.coreController.listMatch[0].id,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Text(
                 'Acompanhe todas as partidas',
                 style: TextStyle(
-                    color: Color(0xFF505854),
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold),
+                  color: Color(0xFF505854),
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold
+                ),
               ),
               const SizedBox(width: 20,),
               ElevatedButton(

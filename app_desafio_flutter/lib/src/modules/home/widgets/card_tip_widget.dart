@@ -1,5 +1,5 @@
 import 'package:app_desafio_flutter/src/core/ui/constants.dart';
-import 'package:app_desafio_flutter/src/core/ui/widgets/button_icon_wiidget.dart';
+import 'package:app_desafio_flutter/src/core/ui/components/button_icon_wiidget.dart';
 import 'package:flutter/material.dart';
 
 class CardTipWidget extends StatelessWidget {

@@ -1,5 +1,5 @@
-import 'package:app_desafio_flutter/setup_getIt.dart';
-import 'package:app_desafio_flutter/src/core/ui/widgets/card_bet.dart';
+import 'package:app_desafio_flutter/src/core/setup_getIt.dart';
+import 'package:app_desafio_flutter/src/core/ui/components/card_bet.dart';
 import 'package:app_desafio_flutter/src/modules/home/home_controller.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';

@@ -1,5 +1,5 @@
-import 'package:app_desafio_flutter/src/core/ui/widgets/button_widget.dart';
-import 'package:app_desafio_flutter/src/core/ui/widgets/input_field_widget.dart';
+import 'package:app_desafio_flutter/src/core/ui/components/button_widget.dart';
+import 'package:app_desafio_flutter/src/core/ui/components/input_field_widget.dart';
 import 'package:flutter/material.dart';
 
 class FormWidget extends StatefulWidget {

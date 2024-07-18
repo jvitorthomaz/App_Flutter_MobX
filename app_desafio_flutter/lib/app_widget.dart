@@ -1,5 +1,5 @@
 import 'package:app_desafio_flutter/routes.dart';
-import 'package:app_desafio_flutter/setup_getIt.dart';
+import 'package:app_desafio_flutter/src/core/setup_getIt.dart';
 import 'package:app_desafio_flutter/src/core/app_theme.dart';
 import 'package:flutter/material.dart';
 

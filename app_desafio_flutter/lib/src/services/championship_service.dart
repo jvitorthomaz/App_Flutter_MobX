@@ -8,6 +8,6 @@ class ChampionshipService {
   ChampionshipService({required ChampionshipRepository repository}) : _repository = repository;
 
   Future<List<ChampionshipModel>> getChampionships() async {
-    return _repository.fetchChampionships();
+    return await _repository.fetchChampionships();
   }
 }

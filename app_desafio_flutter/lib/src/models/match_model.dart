@@ -6,6 +6,7 @@ class MatchModel {
   late String teamA;
   late String teamB;
   late int teamAScore;
+  late int teamBScore;
   late double odds1xbet;
   late double oddsBetsafe;
   late double oddsBetsson;
@@ -30,6 +31,7 @@ class MatchModel {
     required this.teamA,
     required this.teamB,
     required this.teamAScore,
+    required this.teamBScore,
     required this.odds1xbet,
     required this.oddsBetsafe,
     required this.oddsBetsson,
@@ -51,11 +53,12 @@ class MatchModel {
     required this.id,
   });
 
-    MatchModel.fromJson(Map<String, dynamic> json) {
+  MatchModel.fromJson(Map<String, dynamic> json) {
     date = json['date'];
     teamA = json['team_a'];
     teamB = json['team_b'];
     teamAScore = json['team_a_score'];
+    teamBScore = json['team_b_score'];
     odds1xbet = json['1xbet_odds_avg'];
     oddsBetsafe = json['betsafe_odds_avg'];
     oddsBetsson = json['betsson_odds_avg'];
@@ -85,6 +88,7 @@ class MatchModel {
       'teamA': teamA,
       'teamB': teamB,
       'teamAScore': teamAScore,
+      'teamBScore': teamBScore,
       'odds1xbet': odds1xbet,
       'oddsBetsafe': oddsBetsafe,
       'oddsBetsson': oddsBetsson,
@@ -110,25 +114,26 @@ class MatchModel {
   factory MatchModel.fromMap(Map<String, dynamic> map) {
     return MatchModel(
       date: map['date'] ?? '',
-      teamA: map['teamA'] ?? '',
-      teamB: map['teamB'] ?? '',
-      teamAScore: map['teamAScore'] ?? '',
-      odds1xbet: map['odds1xbet'] ?? '',
-      oddsBetsafe: map['oddsBetsafe'] ?? '',
-      oddsBetsson: map['oddsBetsson'] ?? '',
-      likesCount: map['likesCount'] ?? '',
-      starsCount: map['starsCount'] ?? '',
-      viewsCount: map['viewsCount'] ?? '',
-      sharesCount: map['sharesCount'] ?? '',
+      teamA: map['team_a'] ?? '',
+      teamB: map['team_b'] ?? '',
+      teamAScore: map['team_a_score'] ?? 0,
+      teamBScore: map['team_b_score'] ?? 0,
+      odds1xbet: map['odds1xbet'] ?? 0,
+      oddsBetsafe: map['oddsBetsafe'] ?? 0,
+      oddsBetsson: map['oddsBetsson'] ?? 0,
+      likesCount: map['likesCount'] ?? 0,
+      starsCount: map['starsCount'] ?? 0,
+      viewsCount: map['viewsCount'] ?? 0,
+      sharesCount: map['sharesCount'] ?? 0,
       channels: map['channels'] ?? '',
       stadium: map['stadium'] ?? '',
       referee: map['referee'] ?? '',
       refereeAvatar: map['refereeAvatar'] ?? '',
       refereeStats: map['refereeStats'] ?? '',
-      teamAImage: map['teamAImage'] ?? '',
-      teamBImage: map['teamBImage'] ?? '',
-      redCardMedia: map['redCardMedia'] ?? '',
-      yellowCardMedia: map['yellowCardMedia'] ?? '',
+      teamAImage: map['team_a_image'] ?? '',
+      teamBImage: map['team_b_image'] ?? '',
+      redCardMedia: map['redCardMedia'] ?? 0,
+      yellowCardMedia: map['yellowCardMedia'] ?? 0,
       teamAStats: map['teamAStats'] ?? '',
       teamBStats: map['teamBStats'] ?? '',
       id: map['id'] ?? '',

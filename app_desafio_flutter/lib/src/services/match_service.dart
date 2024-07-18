@@ -8,6 +8,6 @@ class MatchService {
   MatchService({required MatchRepository repository}) : _repository = repository;
 
   Future<List<MatchModel>> getMatches() async {
-    return _repository.fetchMatches();
+    return await _repository.fetchMatches();
   }
 }

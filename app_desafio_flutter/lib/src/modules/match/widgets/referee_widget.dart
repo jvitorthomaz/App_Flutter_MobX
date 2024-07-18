@@ -27,7 +27,7 @@ class RefereeWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           SizedBox(
-            height: 105,
+            height: 120,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -35,7 +35,8 @@ class RefereeWidget extends StatelessWidget {
                     height: 56,
                     width: 56,
                     image: AssetImage('assets/images/referee.png'),
-                    fit: BoxFit.cover),
+                    fit: BoxFit.cover
+                  ),
                 Container(
                     width: 130,
                     child: const Text(

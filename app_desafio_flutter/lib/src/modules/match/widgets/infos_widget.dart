@@ -94,7 +94,7 @@ class InfosWidget extends StatelessWidget {
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
                   SizedBox(
-                    width: 100,
+                    width: 120,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -115,7 +115,7 @@ class InfosWidget extends StatelessWidget {
             width: 300,
           ),
           SizedBox(
-            height: 70,
+            height: 100,
             child: Column(
               children: [
                 const Row(
@@ -137,7 +137,7 @@ class InfosWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     const SizedBox(
-                        width: 130,
+                        width: 150,
                         child: Text(
                           'André Luiz Skettino Policarpo',
                           style: TextStyle(

@@ -7,11 +7,14 @@ import 'package:flutter/material.dart';
 class TeamsWidget extends StatelessWidget {
   const TeamsWidget({super.key});
 
+  
+
   @override
   Widget build(BuildContext context) {
     final homeController = getIt<HomeController>();
 
     return Container(
+      padding: const EdgeInsets.fromLTRB(15, 15, 15, 15),
       height: 800,
       decoration: const BoxDecoration(
         gradient: LinearGradient(
@@ -56,7 +59,7 @@ class TeamsWidget extends StatelessWidget {
             ),
           ),
           CardMatchWidget(
-            isMatchPage: false,
+            isMatchPage: true,
             img_a: homeController.coreController.listMatch[0].teamAImage,
             img_b: homeController.coreController.listMatch[0].teamBImage,
             team_a: homeController.coreController.listMatch[0].teamA,
@@ -64,7 +67,7 @@ class TeamsWidget extends StatelessWidget {
             bet: homeController.coreController.listMatch[0].odds1xbet.toString(),
             betsafe: homeController.coreController.listMatch[0].oddsBetsafe.toString(),
             betsson: homeController.coreController.listMatch[0].oddsBetsson.toString(),
-            id: 0,
+            id: 0 //homeController.coreController.listMatch[0].id,
           ),
           Stack(
             alignment: Alignment.center,

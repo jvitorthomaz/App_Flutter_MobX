@@ -1,4 +1,4 @@
-import 'package:app_desafio_flutter/setup_getIt.dart';
+import 'package:app_desafio_flutter/src/core/setup_getIt.dart';
 import 'package:app_desafio_flutter/src/modules/home/home_controller.dart';
 import 'package:app_desafio_flutter/src/modules/home/widgets/card_tip_widget.dart';
 import 'package:carousel_slider/carousel_options.dart';

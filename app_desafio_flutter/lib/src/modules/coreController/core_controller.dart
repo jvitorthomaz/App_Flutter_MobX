@@ -139,7 +139,7 @@ abstract class _CoreControllerBase with Store {
 
   @action
   Future<void> setMatch(MatchModel matchModel) async {
-    match = matchModel;
+    match = await matchModel;
   }
 
 }

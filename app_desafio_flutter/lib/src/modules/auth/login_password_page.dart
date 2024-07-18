@@ -48,7 +48,9 @@ class LoginPasswordPage extends StatelessWidget {
                     barrierDismissible: false,
                     builder: (BuildContext context) => const LoadingWidget(),
                   );
+                  await Future.delayed(const Duration(seconds: 2));
                   if (await authenticationController.loginUser()) {
+                    
                     Navigator.of(context).pop();
                     Navigator.pushNamed(context, '/home');
                   } else {

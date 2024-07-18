@@ -31,7 +31,7 @@ class TeamsWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Container(
-            margin: const EdgeInsets.only(left: 20, right: 20, top: 45),
+            margin: const EdgeInsets.only(left: 0, right: 20, top: 45),
             child: Row(
               children: [
                 ElevatedButton(

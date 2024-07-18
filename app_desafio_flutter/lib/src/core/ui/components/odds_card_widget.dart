@@ -6,20 +6,22 @@ class OddsCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(top: 30, bottom: 30, left: 25, right: 25),
-      height: 300,
-      width: 300,
+      margin: const EdgeInsets.only(top: 10, bottom: 30, left: 15, right: 15),
+      padding: EdgeInsets.only(top: 20,bottom: 10),
+      height: 320,
+      width: 350,
       decoration: BoxDecoration(
-        color: const Color.fromARGB(72, 245, 214, 10),
-        borderRadius: BorderRadius.circular(20.0),
-        boxShadow: [
-          BoxShadow(
-            color: const Color.fromARGB(20, 0, 0, 0).withOpacity(0.15),
-            spreadRadius: 0.1,
-            blurRadius: 15,
-            offset: const Offset(0, 0),
-          ),
-        ],
+        color: const Color.fromRGBO(192, 196, 194, 1),
+
+        borderRadius: BorderRadius.circular(25.0),
+        // boxShadow: [
+        //   BoxShadow(
+        //     color: const Color.fromARGB(20, 0, 0, 0).withOpacity(0.15),
+        //     spreadRadius: 0.1,
+        //     blurRadius: 15,
+        //     offset: const Offset(0, 0),
+        //   ),
+        // ],
       ),
       child: SizedBox(
         width: 280,
@@ -34,42 +36,51 @@ class OddsCardWidget extends StatelessWidget {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                const Align(
-                  alignment: Alignment.bottomLeft,
-                  child: SizedBox(
-                    height: 130,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          children: [
-                            Image(
-                                height: 11,
-                                width: 57,
-                                image: AssetImage('assets/images/bet.png'),
-                                fit: BoxFit.cover),
-                            Text('Patrocinadora'),
-                          ],
-                        ),
-                        Image(
-                            height: 11,
-                            width: 57,
-                            image: AssetImage('assets/images/betsafe.png'),
-                            fit: BoxFit.cover),
-                        Image(
-                            height: 11,
-                            width: 57,
-                            image: AssetImage('assets/images/betsson.png'),
-                            fit: BoxFit.cover),
-                      ],
-                    ),
+                const SizedBox(
+                  height: 130,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        children: [
+                          Image(
+                              height: 11,
+                              width: 57,
+                              image: AssetImage('assets/images/bet.png'),
+                              fit: BoxFit.cover),
+                          Text('Patrocinadora'),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Image(
+                              height: 11,
+                              width: 57,
+                              image: AssetImage('assets/images/betsafe.png'),
+                              fit: BoxFit.cover),
+                              
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Image(
+                              height: 11,
+                              width: 57,
+                              image: AssetImage('assets/images/betsson.png'),
+                              fit: BoxFit.cover),
+                              Text(''),
+                        ],
+                      ),
+                          
+                    ],
                   ),
                 ),
                 SizedBox(
-                  height: 220,
+                  height: 250,
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    mainAxisAlignment: MainAxisAlignment.end,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       const SizedBox(
@@ -109,6 +120,7 @@ class OddsCardWidget extends StatelessWidget {
                         width: 200,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             Container(
                               width: 59,
@@ -161,6 +173,7 @@ class OddsCardWidget extends StatelessWidget {
                         width: 200,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             Container(
                               width: 59,
@@ -213,6 +226,7 @@ class OddsCardWidget extends StatelessWidget {
                         width: 200,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             Container(
                               width: 59,

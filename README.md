@@ -18,13 +18,6 @@
 
 <h2>📖 Sobre</h2>
 
-<p>
-    Projeto desenvolvido para como etrapa do processo seletivo para vaga de Desenvolvedor Mobile Flutter
-</p>
-
-
----  
-
 <h2>🛠️ Funcionalidades e Tecnologias </h2>
 
 
